@@ -4,99 +4,101 @@
 <head>
   <meta charset="UTF-8">
   <title>Emzedi</title>
+  <meta name="keywords" content="Shahrad Mohammadzadeh">
+  <style>
+    @media (max-width: 640px) {
+      .hidden-mobile {
+        display: none;
+      }
+
+      .flex-columns {
+        flex-direction: column; /* Stack items in a column */
+      }
+
+      .flex-columns > div {
+        width: 100%; /* Ensure columns take full width */
+      }
+    }
+
+  </style>
 </head>
 
-
 <body>
-  <!-- This will be body! -->
   <div
-  class="space-y-2 px-3 py-2 text-violet-300 sm:space-y-3 sm:px-6 md:space-y-4 md:px-16 lg:px-32 font-spaceMono bg-gradient-to-b from-gray-800 to-gray-600"
-  id="body">
-    <!-- The navbar tbd -->
+    class="space-y-2 px-3 py-2 text-violet-300 sm:space-y-3 sm:px-6 md:space-y-4 md:px-16 lg:px-32 font-spaceMono bg-gradient-to-b from-gray-800 to-gray-600"
+    id="body">
     <app-header></app-header>
 
     <div *ngIf="restContent">
-    <!-- A container including the welcome messages and code snippets + the pfp -->
-    <div class="font-spaceMono flex md:flex-row md:pb-6">
+      <div class="font-spaceMono flex flex-columns md:pb-6">
 
-      <!-- first column the text -->
-      <div class="sm:space-y-3 md:space-y-9 lg:space-y-11 basis-9/12 bg-center relative md:pt-12">
-        <div class="text-5xl sm:text-6xl md:text-7xl flex px-auto text-center place-content-center">
-          <div class="">Hello World!</div>
-          <!-- <div class="absolute">Hi!</div> -->
+        <!-- First column: Text -->
+        <div class="sm:space-y-3 md:space-y-9 lg:space-y-11 basis-9/12 bg-center relative md:pt-12">
+          <div class="text-5xl sm:text-6xl md:text-7xl flex px-auto text-center place-content-center">
+            <div class="mt-10 pt-4 pb-8">Hello World!</div>
+          </div>
+          <div class="text-2xl text-center pb-6 typer" [innerHTML]="visibleHtmls[0]"></div>
+          <div class="text-2xl text-center pb-6 typer" [innerHTML]="visibleHtmls[1]"></div>
+
+          <div class="flex justify-center md:gap-12 space-x-4">
+            <a target="_blank" href="https://www.linkedin.com/in/shahrad-m-88970b212" class="fill-cyan-100/50 hover:fill-cyan-300 hover:scale-125 ease-out duration-500">
+                <!-- LinkedIn SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-10 w-10">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+            </a>
+            <a target="_blank" href="https://scholar.google.ca/citations?user=6xCdxs0AAAAJ&hl=en" class="fill-cyan-100/50 hover:fill-cyan-300 hover:scale-110 ease-out duration-500">
+                <!-- Email SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-10 w-10"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg>
+            </a>
+            <a target="_blank" href="https://github.com/EMZEDI" class="fill-cyan-100/50 hover:fill-cyan-300 hover:scale-125 ease-out duration-500">
+                <!-- GitHub SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-10 w-10">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
+                </svg>
+            </a>
+            <a target="_blank" href="mailto:shahrad.mohammadzadeh@mcgill.ca" class="fill-cyan-100/50 hover:fill-cyan-300 hover:scale-110 ease-out duration-500">
+                <!-- Email SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-10 w-10">
+                    <g data-name="Layer 2">
+                        <path d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm0 2-6.5 4.47a1 1 0 0 1-1 0L5 6z" />
+                    </g>
+                </svg>
+            </a>
         </div>
-        <div class="text-2xl text-center pb-6 typer" [innerHTML]="visibleHtmls[0]"></div>
-        <div class="text-2xl text-center pb-6 typer" [innerHTML]="visibleHtmls[1]"></div>
-        <div class="text-2xl text-center pb-6 typer" [innerHTML]="visibleHtmls[2]"></div>
-        <div class="text-2xl text-center pb-6 typer" [innerHTML]="visibleHtmls[3]"></div>
-
-
-        <!-- To be completed with typescript -->
-
-        <!-- social media on start they appear as if something is being put on the table -->
-        <div class="flex justify-center md:gap-12 ">
-          <a target="_blank" href="https://www.linkedin.com/in/shahrad-m-88970b212"
-            class="fill-cyan-100/50 w-10 hover:fill-cyan-300 hover:scale-125 ease-out duration-500 pt-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </a>
-          <a target="_blank" href="https://github.com/EMZEDI"
-            class="fill-cyan-100/50 w-10 hover:fill-cyan-300 hover:scale-125 ease-out duration-500 pt-3 ml-2 mr-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
-            </svg>
-          </a>
-          <a target="_blank" href="mailto:shahrad.mohammadzadeh@mcgill.ca"
-            class="fill-cyan-100/50 hover:fill-cyan-300 hover:scale-110 ease-out duration-500 md:h-16 md:w-16 w-14">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g data-name="Layer 2">
-                <path
-                  d="M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm0 2-6.5 4.47a1 1 0 0 1-1 0L5 6z" />
-              </g>
-            </svg>
-          </a>
         </div>
-      </div>
-      <div class="grid">
-        <div class="row-span-1">
 
-          <!-- second column the picture-->
-          <img class="w-full max-w-xs lg:max-h-max object-cover" src="../../assets/pictures/figure3.png"
-            alt="shahradmzpfp">
+        <!-- Second column: Picture -->
+        <div class="grid hidden-mobile">
+          <div class="row-span-1">
+            <img class="w-full max-w-xs lg:max-h-max object-cover" src="../../assets/pictures/figure3.png"
+              alt="shahradmzpfp">
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- about me -->
-    <app-aboutme></app-aboutme>
+      <app-aboutme></app-aboutme>
 
-    <!-- projects -->
-    <h2 class="text-center text-3xl font-bold my-5 pt-8" id="projects">Projects</h2>
-    <div *ngFor="let project of projects">
-      <app-projects class="p-2" [project]="project"></app-projects>
-    </div>
+      <!-- Projects -->
+      <h2 class="text-center text-3xl font-bold my-5 pt-8" id="projects">Projects and Publications</h2>
+      <div *ngFor="let project of projects">
+        <app-projects class="p-2" [project]="project"></app-projects>
+      </div>
 
-<!-- skills -->
-<h2 class="text-center text-3xl font-bold my-5 pt-8 text-purple-400" id="skills">Skills</h2>
-
-<!-- skills -->
-<div class="mt-10 max-w-4xl mx-auto bg-gray-800 rounded-xl shadow-md overflow-hidden m-3 text-gray-400 font-roboto">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-8">
-    <div *ngFor="let category of skills | keyvalue" class="flex flex-col items-start leading-relaxed pb-2">
-      <h3 class="uppercase tracking-wide text-2xl text-purple-400 font-semibold text-center">{{ category.key | titlecase }}</h3>
-      <ul class="mt-2 text-base list-disc list-inside">
-        <li *ngFor="let skill of category.value">{{ skill }}</li>
-      </ul>
+      <!-- Skills -->
+      <h2 class="text-center text-3xl font-bold my-5 pt-8 text-purple-400" id="skills">Skills</h2>
+      <div class="mt-10 max-w-4xl mx-auto bg-gray-800 rounded-xl shadow-md overflow-hidden m-3 text-gray-400 font-roboto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-8">
+          <div *ngFor="let category of skills | keyvalue" class="flex flex-col items-start leading-relaxed pb-2">
+            <h3 class="uppercase tracking-wide text-2xl text-purple-400 font-semibold text-center">{{ category.key | titlecase }}</h3>
+            <ul class="mt-2 text-base list-disc list-inside">
+              <li *ngFor="let skill of category.value">{{ skill }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-  </div>
-</div>
-
 </body>
 
 </html>
