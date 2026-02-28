@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   projects = [
     {
       image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
-      name: 'Hallucination Detox: Sensitive Neuron Dropout (SeND) for Large Language Model Training @ NeurIPS 2024 SafeGenAI',
+      name: 'Hallucination Detox: Sensitive Neuron Dropout (SeND) for Large Language Model Training @ ACL 2025',
       description: 'Our research focuses on improving the reliability of large language models (LLMs) by addressing hallucinations directly during training, rather than relying on post hoc fixes. We introduce Sensitive Neuron Dropout (SeND) and the Efficient EigenScore (EES) metric, which together reduce hallucinations and improve model accuracy by targeting neuron variability and enhancing scalability.',
       githubLink: 'https://arxiv.org/abs/2410.15460'
     },
@@ -47,6 +47,18 @@ export class HomeComponent implements OnInit {
     description: 'Developed an AI web app using DeepFace and Cv2 for real-time facial emotion analysis, coupled with Spotify\'s API for personalized song queues. The backend, powered by Flask, concurrently threads face and playlist analysis, while Vue.js handles frontend interactions. Additionally, won first place at CodeML hackathon for achieving 87.37% accuracy and 79.89% F1 score in predicting stroke risk using Scikit-learn, XGBoost, and PyTorch. Check out the projects on GitHub and Devpost (November 2022).',
     githubLink: 'https://github.com/EMZEDI/Happify',},
     // add more projects as needed...
+    {
+      image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
+      name: 'AIF-GEN: Open-Source Platform and Synthetic Dataset Suite for Reinforcement Learning on Large Language Models @ ICML 2025',
+      description: 'Authors: J Chmura, S Mohammadzadeh, I Anokhin, JJ Tian, M Samiei, et al. Published at the Championing Open-source DEvelopment in ML Workshop @ ICML 2025.',
+      githubLink: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6xCdxs0AAAAJ&citation_for_view=6xCdxs0AAAAJ:IjCSPb-OGe4C'
+    },
+    {
+      image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
+      name: 'Jailbreak-Tuning: Models Efficiently Learn Jailbreak Susceptibility @ EMNLP 2025',
+      description: 'Authors: B Murphy, D Bowen, S Mohammadzadeh, J Broomfield, A Gleave, et al. Published at EMNLP 2025.',
+      githubLink: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6xCdxs0AAAAJ&citation_for_view=6xCdxs0AAAAJ:UeHWp8X0CEIC'
+    },
   ];
   skills = {
     languages: ['Python (advanced)', 'Java (advanced)', 'C/C++', 'Typescript', 'SQL', 'MongoDB', 'GraphQL'],
