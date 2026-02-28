@@ -18,47 +18,50 @@ export class HomeComponent implements OnInit {
     '<div class="bg-cyan-300/25 rounded-2xl text-green-300 hover:text-green-700 text-center max-w-sm m-auto text-xl mt-8"><span class="underline decoration-blue-500 text-pink-400/75">print("</span><span class="hover:bg-blue-700/25 rounded-2xl">I am a Machine Learning Researcher and Master\'s student at Mila/McGill with Doina Precup and Reihaneh Rabbany.</span> <span class="underline decoration-blue-500 text-pink-400/75">")</span> </div>',
   ];
   projects = [
-    {
-      image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
-      name: 'Hallucination Detox: Sensitive Neuron Dropout (SeND) for Large Language Model Training @ ACL 2025',
-      description: 'Our research focuses on improving the reliability of large language models (LLMs) by addressing hallucinations directly during training, rather than relying on post hoc fixes. We introduce Sensitive Neuron Dropout (SeND) and the Efficient EigenScore (EES) metric, which together reduce hallucinations and improve model accuracy by targeting neuron variability and enhancing scalability.',
-      githubLink: 'https://arxiv.org/abs/2410.15460'
-    },
-    {
-      image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
-      name: 'Distillation of Transformers with Efficient Mechanisms @ ICML 2024',
-      description: 'Winner of UofT AI Project X 2024 Competition. We distilled decoder-only transformers like GPT-3 by employing cross-architectural distillation, replacing attention heads with an efficient Hyena mechanism. This led to a remarkable reduction in training time and memory usage, achieving a perplexity score over 40% better than the pre-trained Hyena model. Supervised by Dr. Massaroli from Yoshua Bengio\'s group, the project utilized PyTorch for multi-GPU training and various tools like HuggingFace and Weights and Biases. Accepted to ICML 2024 ES FOMO II Workshop.',
-      githubLink: 'https://arxiv.org/pdf/2401.17574'
-    },
-    {
-      image: '../../assets/pictures/moritz-kindler-G66K_ERZRhM-unsplash.jpg',
-      name: 'Temporal Collaborative Filtering for Link Prediction in Temporal Graphs',
-      description: 'I improved Edgebank for link prediction in temporal graphs by introducing a novel metric, sigma (σ), measuring temporal dynamics. Using PyTorch and SciPy, I implemented a temporal collaborative filtering algorithm capturing both temporal and edge-level dynamics.',
-      githubLink: 'https://drive.google.com/file/d/1sS2vF2qAE_zP744WUqroEjqHeI7K9Jbd/view'
-    },
-    {
-      image: '../../assets/pictures/360_F_336903647_0HD6RdVkAdiY9qp7ZCf150lMd2lHKZXB.jpg',
-      name: 'Moviefy.AI',
-      description: 'I recently built Moviefy.AI, a movie recommendation system using deep collaborative filtering for 1 million users. The project involved containerizing the ML pipeline with Docker, implementing CI/CD using Gitlab and CircleCI, and utilizing Kafka for real-time data updates. I automated versioning with MLFlow and MongoDB, integrated fairness-tracking metrics through Prometheus, and successfully achieved Canary deployment with zero downtime.',
-      githubLink: 'javascript:void(0)',
-    },
-    {image: '../../assets/pictures/fahim-muntashir-14JOIxmsOqA-unsplash.jpg',
+  // Publications first, most recent first
+  {
+    image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
+    name: 'Jailbreak-Tuning: Models Efficiently Learn Jailbreak Susceptibility @ EMNLP 2025',
+    description: 'Authors: B Murphy, D Bowen, S Mohammadzadeh, J Broomfield, A Gleave, et al. Published at EMNLP 2025.',
+    githubLink: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6xCdxs0AAAAJ&citation_for_view=6xCdxs0AAAAJ:UeHWp8X0CEIC'
+  },
+  {
+    image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
+    name: 'AIF-GEN: Open-Source Platform and Synthetic Dataset Suite for Reinforcement Learning on Large Language Models @ ICML 2025',
+    description: 'Authors: J Chmura, S Mohammadzadeh, I Anokhin, JJ Tian, M Samiei, et al. Published at the Championing Open-source DEvelopment in ML Workshop @ ICML 2025.',
+    githubLink: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6xCdxs0AAAAJ&citation_for_view=6xCdxs0AAAAJ:IjCSPb-OGe4C'
+  },
+  {
+    image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
+    name: 'Hallucination Detox: Sensitive Neuron Dropout (SeND) for Large Language Model Training @ ACL 2025',
+    description: 'Our research focuses on improving the reliability of large language models (LLMs) by addressing hallucinations directly during training, rather than relying on post hoc fixes. We introduce Sensitive Neuron Dropout (SeND) and the Efficient EigenScore (EES) metric, which together reduce hallucinations and improve model accuracy by targeting neuron variability and enhancing scalability.',
+    githubLink: 'https://arxiv.org/abs/2410.15460'
+  },
+  {
+    image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
+    name: 'Distillation of Transformers with Efficient Mechanisms @ ICML 2024',
+    description: 'Winner of UofT AI Project X 2024 Competition. We distilled decoder-only transformers like GPT-3 by employing cross-architectural distillation, replacing attention heads with an efficient Hyena mechanism. This led to a remarkable reduction in training time and memory usage, achieving a perplexity score over 40% better than the pre-trained Hyena model. Supervised by Dr. Massaroli from Yoshua Bengio\'s group, the project utilized PyTorch for multi-GPU training and various tools like HuggingFace and Weights and Biases. Accepted to ICML 2024 ES FOMO II Workshop.',
+    githubLink: 'https://arxiv.org/pdf/2401.17574'
+  },
+  // Projects next
+  {
+    image: '../../assets/pictures/moritz-kindler-G66K_ERZRhM-unsplash.jpg',
+    name: 'Temporal Collaborative Filtering for Link Prediction in Temporal Graphs',
+    description: 'I improved Edgebank for link prediction in temporal graphs by introducing a novel metric, sigma (σ), measuring temporal dynamics. Using PyTorch and SciPy, I implemented a temporal collaborative filtering algorithm capturing both temporal and edge-level dynamics.',
+    githubLink: 'https://drive.google.com/file/d/1sS2vF2qAE_zP744WUqroEjqHeI7K9Jbd/view'
+  },
+  {
+    image: '../../assets/pictures/360_F_336903647_0HD6RdVkAdiY9qp7ZCf150lMd2lHKZXB.jpg',
+    name: 'Moviefy.AI',
+    description: 'I recently built Moviefy.AI, a movie recommendation system using deep collaborative filtering for 1 million users. The project involved containerizing the ML pipeline with Docker, implementing CI/CD using Gitlab and CircleCI, and utilizing Kafka for real-time data updates. I automated versioning with MLFlow and MongoDB, integrated fairness-tracking metrics through Prometheus, and successfully achieved Canary deployment with zero downtime.',
+    githubLink: 'javascript:void(0)'
+  },
+  {
+    image: '../../assets/pictures/fahim-muntashir-14JOIxmsOqA-unsplash.jpg',
     name: 'Happify and Hackify - two Hackathon winners',
     description: 'Developed an AI web app using DeepFace and Cv2 for real-time facial emotion analysis, coupled with Spotify\'s API for personalized song queues. The backend, powered by Flask, concurrently threads face and playlist analysis, while Vue.js handles frontend interactions. Additionally, won first place at CodeML hackathon for achieving 87.37% accuracy and 79.89% F1 score in predicting stroke risk using Scikit-learn, XGBoost, and PyTorch. Check out the projects on GitHub and Devpost (November 2022).',
-    githubLink: 'https://github.com/EMZEDI/Happify',},
-    // add more projects as needed...
-    {
-      image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
-      name: 'AIF-GEN: Open-Source Platform and Synthetic Dataset Suite for Reinforcement Learning on Large Language Models @ ICML 2025',
-      description: 'Authors: J Chmura, S Mohammadzadeh, I Anokhin, JJ Tian, M Samiei, et al. Published at the Championing Open-source DEvelopment in ML Workshop @ ICML 2025.',
-      githubLink: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6xCdxs0AAAAJ&citation_for_view=6xCdxs0AAAAJ:IjCSPb-OGe4C'
-    },
-    {
-      image: '../../assets/pictures/istockphoto-1486380350-612x612.jpg',
-      name: 'Jailbreak-Tuning: Models Efficiently Learn Jailbreak Susceptibility @ EMNLP 2025',
-      description: 'Authors: B Murphy, D Bowen, S Mohammadzadeh, J Broomfield, A Gleave, et al. Published at EMNLP 2025.',
-      githubLink: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6xCdxs0AAAAJ&citation_for_view=6xCdxs0AAAAJ:UeHWp8X0CEIC'
-    },
+    githubLink: 'https://github.com/EMZEDI/Happify'
+  }
   ];
   skills = {
     languages: ['Python (advanced)', 'Java (advanced)', 'C/C++', 'Typescript', 'SQL', 'MongoDB', 'GraphQL'],
